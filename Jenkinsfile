@@ -17,9 +17,9 @@ pipeline {
         emailext(subject: 'Autorizar', body: 'favor de Autorizar', attachLog: true, to: 'Arturo')
       }
     }
-    stage('Deploy') {
+    stage('End') {
       steps {
-        sh 'echo "Poner aqui que se instale"'
+        input(message: 'aprobar', submitterParameter: 'Sergio')
       }
     }
   }
