@@ -25,6 +25,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo "Listo"'
+        emailext(subject: 'Deployment', body: 'Se envio a PROD', attachLog: true, to: 'Sergio')
       }
     }
   }
