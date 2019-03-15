@@ -17,9 +17,14 @@ pipeline {
         emailext(subject: 'Autorizar', body: 'favor de Autorizar', attachLog: true, to: 'Arturo')
       }
     }
-    stage('End') {
+    stage('Aprobar') {
       steps {
         input(message: 'aprobar', submitterParameter: 'Sergio')
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'echo "Listo"'
       }
     }
   }
