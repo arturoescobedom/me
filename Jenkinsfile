@@ -14,6 +14,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'npm test'
+        emailext(subject: 'Autorizar', body: 'favor de Autorizar', attachLog: true, to: 'Arturo')
       }
     }
     stage('Deploy') {
