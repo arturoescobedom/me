@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Aprobar') {
       steps {
-        input(message: 'aprobar', submitterParameter: 'Sergio')
+        input(message: 'aprobar', submitterParameter: 'Sergio', submitter: 'Arturo')
       }
     }
     stage('Deploy') {
